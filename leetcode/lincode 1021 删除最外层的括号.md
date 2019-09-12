@@ -63,7 +63,9 @@ S 是一个有效括号字符串
 - 两个字符串长度相同
 - 两个字符串不同之处有且只有两处
 - 并且两个不同处交叉值后相等
-### 代码
+
+### js代码 
+> 耗时201ms
 ``` PowerShell
 var removeOuterParentheses1 = function (S) {
   var i = 0;
