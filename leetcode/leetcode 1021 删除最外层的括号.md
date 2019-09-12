@@ -1,4 +1,3 @@
-> leetcode链接: [https://leetcode-cn.com/problems/remove-outermost-parentheses/submissions/](https://leetcode-cn.com/problems/remove-outermost-parentheses/submissions/)
 ### 原题
 有效括号字符串为空 ("")、"(" + A + ")" 或 A + B，其中 A 和 B 都是有效的括号字符串，+ 代表字符串的连接
 
@@ -59,6 +58,11 @@ S.length <= 10000
 S[i] 为 "(" 或 ")"
 
 S 是一个有效括号字符串
+
+来源：力扣（LeetCode）
+
+链接：https://leetcode-cn.com/problems/remove-outermost-parentheses
+
 ### 思路
 先处理特殊情况 当两个字符串相等时即（A == B）
  - 没有重复字符 返回false 
