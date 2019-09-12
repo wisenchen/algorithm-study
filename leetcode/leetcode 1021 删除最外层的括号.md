@@ -1,4 +1,4 @@
-> lintcode链接: [https://www.lintcode.com/problem/buddy-strings/leaderboard](https://www.lintcode.com/problem/buddy-strings/leaderboard)
+> leetcode链接: [https://leetcode-cn.com/problems/remove-outermost-parentheses/submissions/](https://leetcode-cn.com/problems/remove-outermost-parentheses/submissions/)
 ### 原题
 有效括号字符串为空 ("")、"(" + A + ")" 或 A + B，其中 A 和 B 都是有效的括号字符串，+ 代表字符串的连接
 
