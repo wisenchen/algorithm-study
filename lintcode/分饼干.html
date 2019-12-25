@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            1230. 分饼干
+            假设你是一个了不起的家长，准备给你的孩子们一些饼干吃，但是你只能给每个孩子至多一块饼干。每一块饼干jj都有一个尺寸s_{j}s
+            ​j
+            ​​ ；同时每一个孩子ii都有一个贪吃指数g_{i}g
+            ​i
+            ​​ ，代表了能使他满足的最小的饼干尺寸。如果s_{j} \geq g_{i}s
+            ​j
+            ​​ ≥g
+            ​i
+            ​​ ，那么就可以将饼干jj分给孩子ii使他得到满足。你的目标是使最多的孩子得到满足，输出这个最大值。
+
+            样例
+            样例1：
+
+            输入：[1,2,3], [1,1]
+            输出：1
+            说明：你有三个孩子和两块饼干，三个孩子的贪吃指数分别是1，2，3
+            虽然你有两块饼干，但是因为它们的大小都为1，你只能满足让贪吃指数为1的孩子满足，因此你应该输出1
+            样例2：
+
+            输入：[1,2], [1,2,3]
+            输出：2
+            说明：你有两个孩子和三块饼干，两个孩子的贪吃指数分别是1和2
+            这三块饼干的大小足以满足所有的孩子，因此你应该输出2
+            注意事项
+            贪吃指数总会是一个正整数
+            你不能将一块以上的饼干分配给同一个孩子
+        */
+        // 原解
+        const findContentChildren = function (g, s) {
+            var sum = 0;
+            g.sort((a, b) => (a - b));
+            s.sort((a, b) => (a - b));
+            var glen = g.length,
+                slen = s.length,
+                gindex = 0,
+                sindex = 0;
+            while (gindex < glen && sindex < slen) {
+                if (s[sindex] >= g[gindex]) {
+                    sum++;
+                    gindex++;
+                }
+                sindex++;
+            }
+            return sum;
+        }
+    </script>
+</body>
+
+</html>

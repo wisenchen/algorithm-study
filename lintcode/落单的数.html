@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            82. 落单的数
+            给出 2 * n + 1个数字，除其中一个数字之外其他每个数字均出现两次，找到这个数字。
+            样例
+            样例 1:
+
+            输入：[1,1,2,2,3,4,4]
+            输出：3
+            解释：
+            仅3出现一次
+            样例 2:
+
+            输入：[0,0,1]
+            输出：1
+            解释：
+            仅1出现一次
+            挑战
+            一次遍历，常数级的额外空间复杂度
+
+            注意事项
+            n≤100
+
+        */
+        // 解：利用异或运算
+        /*
+         1^2^1 => 2 相同数字异或得到0 所以 1^2^1可以简化为 0^2 => 2
+         所以只需要把这个数组都异或一次即可
+        */
+        const singleNumber = function (n) {
+            var len = n.length;
+            var v = 0;
+            while (len) {
+                v = v ^ n[--len];
+            }
+            return v;
+        }
+        // 一行代码
+        var singleNumber1 = nums => (nums.reduce((p, c) => (p ^ c)));
+    </script>
+</body>
+
+</html>

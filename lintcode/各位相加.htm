@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            569. 各位相加
+            给出一个非负整数 num，反复的将所有位上的数字相加，直到得到一个一位的整数。
+
+            样例
+            例1:
+
+            输入: num=38
+            输出: 2
+            解释:
+            过程如下： 3 + 8 = 11, 1 + 1 = 2. 因为 2 只有一个数字，返回 2.
+
+            例2:
+
+            输入: num=9
+            输出: 9
+            解释:
+            9<10,返回 9.
+            挑战
+            你可以不用任何的循环或者递归算法，在 O(1) 的时间内解决这个问题么？
+        */
+        // 原解
+        const addDigits = function (num) {
+            let sum = 0;
+            var str = String(num);
+            let len = str.length;
+            while (true) {
+                while (len--) {
+                    sum += str[len] - 0;
+                }
+                if (sum < 10) return sum;
+                str = String(sum);
+                len = str.length;
+                sum = 0;
+            }
+        }
+        // 看答案后
+        let addDigits1 = n => ((n - 1) % 9 + 1)
+    </script>
+</body>
+
+</html>

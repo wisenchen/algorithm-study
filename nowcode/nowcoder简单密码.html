@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function crackingPwd(nums) {
+            var key = { a: 2, b: 2, c: 2, d: 3, e: 3, f: 3, g: 4, h: 4, i: 4, j: 5, k: 5, l: 5, m: 6, n: 6, o: 6, p: 7, q: 7, r: 7, s: 7, t: 8, u: 8, v: 8, w: 9, x: 9, y: 9, z: 9 };
+            return nums.replace(/[a-z]/g, (v) => (key[v])).replace(/[A-Z]/g, (v) => (v == "Z" ? "a" : String.fromCharCode(v.toLowerCase().charCodeAt() + 1)));
+        }
+    </script>
+</body>
+
+</html>

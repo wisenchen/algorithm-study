@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            975. 只有2个按键的键盘
+            初始时在记事本上只有一个字符 'A'。你可以在此记事本上每一步可以进行两种操作：
+
+            Copy All: 你可以复制记事本上所有的字符（不允许部分复制）
+            Paste: 你可以粘贴上一次复制的字符。
+            给出一个数字 n。你需要在记事本上得到恰好 n 个 'A'， 请问最少需要几步。
+
+            样例
+            例1:
+
+            输入: 3
+            输出: 3
+            解释:
+            Intitally, we have one character 'A'.
+            In step 1, we use Copy All operation.
+            In step 2, we use Paste operation to get 'AA'.
+            In step 3, we use Paste operation to get 'AAA'.
+            例2:
+
+            输入: 1
+            输出: 0
+            注意事项
+            n 在范围 [1, 1000]内
+        */
+        // 原解  40min
+        const minSteps = function (n) {
+            if (n <= 1) return 0;
+            if (n % 2 !== 0) { // 奇数
+                var flag = n / 2;
+                var lowest = 0;
+                var i = 3;
+                while (i < flag) { // 求出最小能整除的数
+                    if (n % i === 0) {
+                        lowest = n / i;
+                        break;
+                    }
+                    i++;
+                }
+                if (lowest === 0) {
+                    return n;
+                } else {
+                    return i + minSteps(lowest);
+                }
+            } else { // 偶数
+                return 2 + minSteps(n / 2);
+            }
+        }
+        const minSteps1 = function (n) {
+            if (n == 1) return 0;
+            var res = n;
+            for (var i = n - 1; i > 1; --i) {
+                if (n % i === 0) {
+                    res = Math.min(res, minSteps(n / i) + i);
+                }
+            }
+            return res;
+        }
+        const minSteps2 = function (n) {
+            var res = 0;
+            for (var i = 2; i <= n; i++) {
+                while (n % i === 0) {
+                    res += i;
+                    n /= i;
+                }
+            }
+            return res;
+        }
+    </script>
+</body>
+
+</html>

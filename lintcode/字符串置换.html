@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            211. 字符串置换
+            给定两个字符串，请设计一个方法来判定其中一个字符串是否为另一个字符串的置换。
+
+            置换的意思是，通过改变顺序可以使得两个字符串相等。
+
+            样例
+            Example 1:
+                Input:  "abcd", "bcad"
+                Output:  True
+
+
+            Example 2:
+                Input: "aac", "abc"
+                Output:  False
+
+        简单思路：判断两个字符串所有的字符是否相等即可
+
+        */
+        // 解1：
+        // 转数组后排序再转回字符串比较是否相等
+        const permutation = (A, B) => (A.split("").sort().join("") == B.split("").sort().join(""));
+
+
+        // 解2
+        // 判断它们各字符出现次数是否相等
+        const permutation1 = (A, B) => {
+            let [Alen, Blen] = [A.length, B.length];
+            if (Alen !== Blen) return false;
+            let obj = {};
+            while (Alen--) {
+                if (!obj[A[Alen]]) {
+                    obj[A[Alen]] = 0;
+                }
+                if (!obj[B[Alen]]) {
+                    obj[B[Alen]] = 0;
+                }
+                obj[A[Alen]]++;
+                obj[B[Alen]]--;
+            }
+            for (let key in obj) {
+                if (obj[key] !== 0) return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

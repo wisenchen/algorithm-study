@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            用友2017笔试题
+            题目描述
+                小张预见用友软件的股票在下一个交易日的8个交易时间的交易价格，这8个交易时间的价格按时序排列为[100, 108, 90, 88, 101, 80 89, 86]，假设他只能买一次，卖一次,，请问它如何操作获利才能最大
+                双指针按顺序求最大差值
+        */
+        var arr = [100, 108, 90, 88, 101, 80, 89, 86];
+
+        function findMaxProfit(arr) {
+            var l = 0,
+                r = arr.length - 1,
+                maxProfit = 0,
+                buy = null,
+                sell = null;
+            while (l < r) {
+                let dif = arr[r] - arr[l];
+                if (dif > maxProfit) {
+                    maxProfit = dif;
+                    buy = l,
+                        sell = r;
+                }
+                l++;
+                if (l == r) {
+                    l = 0;
+                    r--;
+                }
+            }
+            return `${arr[buy]}时买入，${arr[sell]}卖出`;
+        }
+    </script>
+</body>
+
+</html>

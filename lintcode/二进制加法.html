@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            408. 二进制求和
+            给定两个二进制字符串，返回他们的和（用二进制表示）。
+            样例
+            样例 1：
+
+            输入：
+            a = "0", b = "0"
+            输出：
+            "0"
+            样例 2：
+
+            输入：
+            a = "11", b = "1"
+            输出：
+            "100"
+        */
+        // 简单解法 转十进制后相加再转回二进制返回
+        const addBinary1 = function (a, b) {
+            var sum = parseInt(a, 2) + parseInt(b, 2);
+            return sum.toString(2);
+        }
+        // 不使用进制转换方法 parseInt 与toString
+        // 思路：遍历  每次拿取a,b的最后一位字符 如果取不到则为0;
+        //   转数字后相加 如果等于二则表示需要进位 这里定义一个carry变量表示是否进位 1为进位0为不进位
+        //   求和时在和进位数carry相加如果还是等于二 则继续进位 当前位的值为 sum-2
+
+        const addBinary = function (a, b) {
+            let [alen, blen, res, carry] = [a.length, b.length, "", 0]; // 初始化 a、b 的长度alen、blen res 需要返回的二级制字符串  carry 进位表示符
+            while (alen > 0 || blen > 0) { // 只要还存在一个字符串长度大于0则继续遍历
+                alen--;
+                blen--;
+                let [aval,bval] = [ a[alen]||0, b[blen]||0 ]; // 当前位的值
+                let sum = (aval - 0) + (bval - 0) + carry; // 转数字后相加并加上当前的进位数
+                if (sum >= 2) { // 等于二 进位 
+                    sum -= 2;  // 因为进了为所以当前位 为sum-2 正常进位后当前位为0 但这因为之前加上了 carry 当前的进位数 所以-2
+                    carry = 1;
+                } else { // 小于二 不进位 
+                    carry = 0;
+                }
+                // 添加到字符串前
+                res = sum + res;
+            }
+            // 最后判断是否还存在进位 存在则最后进一位
+            if (carry) res = "1" + res;
+            return res;
+        }
+    </script>
+</body>
+
+</html>

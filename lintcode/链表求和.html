@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            167. 链表求和
+            你有两个用链表代表的整数，其中每个节点包含一个数字。数字存储按照在原来整数中相反的顺序，使得第一个数字位于链表的开头。写出一个函数将两个整数相加，用链表形式返回和。
+
+            样例
+            样例 1:
+
+            输入: 7->1->6->null, 5->9->2->null
+            输出: 2->1->9->null	
+            样例解释: 617 + 295 = 912, 912 转换成链表:  2->1->9->null
+            样例 2:
+
+            输入:  3->1->5->null, 5->9->2->null
+            输出: 8->0->8->null	
+            样例解释: 513 + 295 = 808, 808 转换成链表: 8->0->8->null
+        
+        */
+       // 原解
+       /* 
+        使用递归分别拿到两个链表的各值反顺序组合
+        转数字相加 （但是会与到有大数字情况 所以使用字符串十进制加法）
+        得到和后再使用递归创建链表
+       */ 
+       const addLists = function (l1, l2) {
+            let l1Num = "",
+                l2Num = "";
+            while (l1 || l2) { // 使用循环就可替代递归
+                if (l1) {
+                    l1Num = l1.val + l1Num;
+                    l1 = l1.next;
+                }
+                if (l2) {
+                    l2Num = l2.val + l2Num;
+                    l2 = l2.next;
+                }
+            }
+            // 使用大整数求和
+            let sum = addBinary(l1Num, l2Num);
+
+            // 创建链表
+            function createNode(str, node) {
+                if (!str.length) {
+                    return node;
+                }
+                node.next = new ListNode(str[str.length - 1] - 0);
+                createNode(str.slice(0, str.length - 1), node.next)
+                return node;
+            }
+            var node = new ListNode(sum[sum.length - 1] - 0);
+            createNode(sum.slice(0, sum.length - 1), node)
+            return node;
+        }
+
+
+        const addBinary = function (a, b) {
+            let [alen, blen, res, carry] = [a.length, b.length, "",
+            0]; // 初始化 a、b 的长度alen、blen res 需要返回的二级制字符串  carry 进位表示符
+            while (alen > 0 || blen > 0) { // 只要还存在一个字符串长度大于0则继续遍历
+                alen--;
+                blen--;
+                let [aval, bval] = [a[alen] || 0, b[blen] || 0]; // 当前位的值
+                let sum = (aval - 0) + (bval - 0) + carry; // 转数字后相加并加上当前的进位数
+                if (sum >= 10) { // 等于二 进位 
+                    sum -= 10; // 因为进了为所以当前位 为sum-2 正常进位后当前位为0 但这因为之前加上了 carry 当前的进位数 所以-2
+                    carry = 1;
+                } else { // 小于二 不进位 
+                    carry = 0;
+                }
+                // 添加到字符串前
+                res = sum + res;
+            }
+            // 最后判断是否还存在进位 存在则最后进一位
+            if (carry) res = "1" + res;
+            return res;
+        }
+        // 优解
+        /*
+                 7->1->6->null
+                 5->9->2->null
+            思路：
+                直接对两个列表对应的每一个值相加 如果大于10则进位 carry = 1;
+                都相加完后 得到  219 
+                此时再来创建链表  看题解上（是可以在每一位相加后时直接创建链表的 暂时未考虑）
+        */
+    </script>
+</body>
+
+</html>

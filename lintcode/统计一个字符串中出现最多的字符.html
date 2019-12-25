@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        const isLegalIdentifier = function (str) {
+            // Write your code here.
+            var i = str.length - 1;
+            var obj = {};
+            while (i >= 0) {
+                if (obj[str[i]] === undefined) {
+                    obj[str[i]] = { name: str[i], i: 0 };
+                }
+                obj[str[i]].i++;
+                i--;
+            }
+            return Object.values(obj).sort((a, b) => (b.i - a.i))[0].name;
+        }
+    </script>
+</body>
+
+</html>

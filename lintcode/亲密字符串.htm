@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  
+            1510. 亲密字符串
+            给定两个由小写字母构成的字符串A 和B，只要我们可以通过交换A中的两个字母得到与B相等的结果，就返回true；否则返回false。
+            样例
+            Example 1:
+
+            Input: A = "ab", B = "ba"
+            Output: true
+            Example 2:
+
+            Input: A = "ab", B = "ab"
+            Output: false
+            Example 3:
+
+            Input: A = "aa", B = "aa"
+            Output: true
+            Example 4:
+
+            Input: A = "aaaaaaabc", B = "aaaaaaacb"
+            Output: true
+        */
+        // 解（slef）  Within 15 min
+        /*
+            思路：
+                判断特殊情况：
+                     A==B 时 
+                     没有重复字符 返回false 即 A = abc  B = abc
+                     有重复字符 返回true    即 A = aac  B = aac
+                遍历两个字符串 统计不同处
+                    2处不同 则继续判断它们交叉交换后是否相等
+                    大于或小于两处不同 返回true
+
+
+        */
+        const buddyStrings = function (A, B) {
+            if (A == B) return new Set(A).size !== B.length; // 去重后的长度与之前字符串长度相比较  相等则无重复字符 返回false 否则 返回true
+            let Astr = "",
+                Bstr = "",
+                len = A.length;
+            while (len--) {
+                if (A[len] !== B[len]) { // 判断两个字符串相同位是否相等
+                    Astr += A[len]; 
+                    Bstr = B[len] + Bstr; // 交叉值
+                }
+            }
+            return Astr.length == 2 && Astr == Bstr; // 不同字符等于2个并且 交叉后相等 返回true 否则 返回false
+        }
+    </script>
+</body>
+
+</html>

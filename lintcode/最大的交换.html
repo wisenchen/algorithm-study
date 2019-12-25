@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            1095. 最大的交换
+            给定一个非负整数, 你可以选择交换它的两个数位. 返回你能获得的最大的合法的数.
+            样例
+            样例1:
+
+            输入: 2736
+            输出: 7236
+            解释: 交换数字2和数字7.
+            样例2:
+
+            输入: 9973
+            输出: 9973
+            解释: 不用交换.
+
+        */
+        // 解
+        /*
+            思路：
+                从后往前遍历每一位数找到最大数后记录索引
+                判断最大数是否和首位需要交换的数相等 
+                相同则不交换 继续比较下一位
+                不相同转成数组交换后转成数字返回
+
+            例： input : 2736
+             1. 转字符串 s："2736"
+             2. 获取长度 len 4
+             3. index 需要交换的位置
+             4. 交换的首位 初始为第一位
+             5. 循环s 2736
+             6. 循环 736 从中间找最大值 并记录索引
+             7. max: 7 index:1
+             8. 找到最大值后 判断是否需要交换 即 最值是否与首位相同或小于
+             9. 7 > 2 交换位置后返回数字
+             10.如果 max<首位s[l]
+             11.首位下移一位 继续从 s[l+1 ~ len-1] 之间找最大值  
+
+        */
+        const maximumSwap = function (num) {
+            var s = num + "",
+                len = s.length,
+                index = 0,
+                l = 0;
+            while (l < len) {
+                var r = len - 1;
+                var max = 0;
+                while (r > l) {
+                    if (s[r] > max) {
+                        max = s[r];
+                        index = r;
+                    }
+                    r--;
+                }
+                if (max <= s[l]) {
+                    l++;
+                } else {
+                    var arr = s.split("");
+                    [arr[l], arr[index]] = [arr[index], arr[l]];
+                    return arr.join("") - 0;
+                }
+
+            }
+            return num;
+        }
+    </script>
+</body>
+
+</html>

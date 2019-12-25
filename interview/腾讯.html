@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      1. 字符串解码
+      小明和小红用字符串压缩通信。
+      字符串压缩规则是：如果有连续重复的字符串比如ABCABCABC就缩写成[3|ABC]。
+      现有压缩后的字符串，设计一个解压程序还原字符串。
+      样例：
+      输入：
+      HG[3|B[2|CA]]F
+      输出：
+      HGBCACABCACABCACAF
+    */
+    function decodeString(str) {
+      var stack = [];
+      for (let i = 0; i < str.length; ++i) {
+        if (str[i] == '[') {
+          stack.push(i);
+        } else if (str[i] == ']') {
+          let index = stack.pop();
+          let arr = str.slice(index + 1, i).split("|");
+          let repetStr = arr[1].repeat(arr[0]);
+          str = str.slice(0, index) + repetStr + str.slice(i + 1);
+          i += repetStr.length - (i + 1 - index);
+        }
+      }
+      return str;
+    }
+    console.log(decodeString("HG[3|B[2|CA]]F"));
+   
+  </script>
+</body>
+
+</html>

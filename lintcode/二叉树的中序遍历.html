@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 67. 二叉树的中序遍历  
+        /*
+            原题解释
+                输入：{1,2,3}
+                输出：[2,1,3]
+                解释：
+                 1
+                / \
+                2   3
+                它将被序列化为{1,2,3}
+                中序遍历
+                样例 2:
+
+                输入：{1,#,2,3}
+                输出：[1,3,2]
+                解释：
+                1
+                \
+                2
+                /
+                3
+                它将被序列化为{1,#,2,3}
+                中序遍历
+            需求分析：
+                例子 输入{1,2,3,4,5} 
+                    实际会转化为
+                    _exports_TreeNode {
+                        right: _exports_TreeNode { right: null, left: null, val: 3 },
+                        left: 
+                        _exports_TreeNode {
+                            right: _exports_TreeNode { right: null, left: null, val: 5 },
+                            left: _exports_TreeNode { right: null, left: null, val: 4 },
+                            val: 2 },
+                        val: 1 }
+                    精简版js对象：
+                           {
+                               right：{
+                                   right:null,
+                                   left:null.
+                                   val:3
+                               },
+                               left:{
+                                   right:{
+                                       right:null,
+                                       left:null.
+                                       val:5
+                                   },
+                                   left:{
+                                       right:null,
+                                       left:null,
+                                       val:4
+                                   }
+                                   val:2
+                                },
+                                val:1
+                           } 
+                           结构：
+                            1
+                           2 3
+                          4 5   
+                        结果应为:[4,2,5,1,3]
+                        具体:首先遍历left 
+                            1  此时 val = 2 存在right 与left
+                            2  再进入left 此时 val = 4 不存在right 与left 都不存在则直接push到数组 所以4为第一位
+                            3  出来之后再把val = 2push到数组作为第二位
+                            4  此时的right存在 则进入  进入后 val = 5 不存在right 与left push5到数组 此时的arr 为 [4,2,5]
+                            5  第一层的left遍历完毕
+                            6  出来后 把 val = 1 push到数组     此时的arr 为 [4,2,5,1]
+                            7  之后遍历right val = 3 不存在right 与left  push 3 到数组  [4,2,5,1,3]
+                        有left则遍历left直到最底层left不存在时 把当前val当做第一位 之后再遍历当前的right同样遍历到最底层
+                        优先级：left,push 当前val后在遍历right
+
+        */
+        //    递归方式
+        var root = {
+                right: {
+                    right: null,
+                    left: null,
+                    val: 3
+                },
+                left: {
+                    right: {
+                        right: null,
+                        left: null,
+                        val: 5
+                    },
+                    left: {
+                        right: null,
+                        left: null,
+                        val: 4
+                    },
+                    val: 2
+                },
+                val: 1
+            }
+
+        function inorderTraversal(root, arr = []) {
+            if(!root) return arr;
+            if(root.left){ // 优先遍历左节点
+                inorderTraversal(root.left,arr); // 接着遍历左节点 因为函数顶端做了判断 不存在会直接返回
+                arr.push(root.val); // 到这已经是左节点的最底层了 直接push此时的val 
+                inorderTraversal(root.right,arr) // 再来遍历当前右节点
+            }else{  // 左节点不存在时 即返回了上一层 直接push当前的val 后在遍历right
+                arr.push(root.val);
+                inorderTraversal(root.right,arr)
+            }
+            return arr;
+        }   
+        console.log(inorderTraversal(root))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const PredictTheWinner = function (nums) {
+            if (nums === null) { return true; } // nums不存在返回true
+            var n = nums.length;
+            if ((n & 1) === 0) { return true; } // 如果长度偶数则直接返回true;
+            var dp = [];
+            for (var i = n - 1; i >= 0; i--) {
+                for (var j = i; j < n; j++) {
+                    if (i == j) {
+                        dp[i] = nums[i];
+                    } else {
+                        dp[j] = Math.max(nums[i] - dp[j], nums[j] - dp[j - 1]);
+                    }
+                }
+            }
+            return dp[n - 1] >= 0;
+        }    
+    </script>
+</body>
+
+</html>
