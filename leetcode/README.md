@@ -19,7 +19,7 @@
 |[278.第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/)|简单|二分查找|[JavaScript](./初级算法专题/278.第一个错误的版本.md)|2019/12/4
 |[70.爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)|简单|动态规划|[JavaScript](./初级算法专题/70.爬楼梯.md)|2019/12/5
 |[121.买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|简单|数组、动态规划|[JavaScript](./初级算法专题/121.买卖股票的最佳时机.md)|2019/12/6
-|[53.最大子序列和](https://leetcode-cn.com/problems/maximum-subarray/)|简单|数组、分治、动态规划|[JavaScript](./初级算法专题/53.最大子序列和.md)|2019/12/7
+|[53.最大子序列和](https://leetcode-cn.com/problems/maximum-subarray/)|简单|数组、动态规划|[JavaScript](./初级算法专题/53.最大子序列和.md)|2019/12/7
 |[198.打家劫舍](https://leetcode-cn.com/problems/house-robber/)|简单|动态规划|[JavaScript](./初级算法专题/198.打家劫舍.md)|2019/12/8
 |[384.打乱数组](https://leetcode-cn.com/problems/shuffle-an-array/)|中等|设计|[JavaScript](./初级算法专题/384.打乱数组.md)|2019/12/9
 |[155.最小栈](https://leetcode-cn.com/problems/min-stack/)|简单|设计、栈|[JavaScript](./初级算法专题/155.最小栈.md)|2019/12/10
@@ -32,7 +32,7 @@
 |[190.颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)|简单|位运算|[JavaScript](./初级算法专题/190.颠倒二进制位.md)|2019/12/17
 |[118.杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)|简单|数组|[JavaScript](./初级算法专题/118.杨辉三角.md)|2019/12/18
 |[20.有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)|简单|栈、字符串|[JavaScript](./初级算法专题/20.有效的括号.md)|2019/12/19
-|[268.缺失数字](https://leetcode-cn.com/problems/missing-number/)|简单|位运算、数组、数学|[JavaScript](./初级算法专题/268.缺失数字.md)|2019/12/20
+|[268.缺失数字](https://leetcode-cn.com/problems/missing-number/)|简单|位运算、数组|[JavaScript](./初级算法专题/268.缺失数字.md)|2019/12/20
 |[26.删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|简单|数组、双指针|[JavaScript](./初级算法专题/26.删除排序数组中的重复项.md)|2019/12/21|开始重刷数组到链表部分
 |[122.买卖股票的最佳时机II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|贪心、数组|[JavaScript](./初级算法专题/122.买卖股票的最佳时机II.md)|2019/12/22
 |[189.旋转数组](https://leetcode-cn.com/problems/rotate-array/)|简单|数组|[JavaScript](./初级算法专题/189.旋转数组.md)|2019/12/23
