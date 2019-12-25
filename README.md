@@ -10,7 +10,7 @@
 
 #### [初级算法专题](https://leetcode-cn.com/explore/featured/card/top-interview-questions-easy/)
 <details open>
-<summary>初级算法专题</summary>
+<summary>展开/收起</summary>
 
 |名称|难度|类型|题解|日期|备注|
 |--|--|--|--|--|--|
