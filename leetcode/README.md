@@ -33,7 +33,7 @@
 |[118.杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)|简单|数组|[JavaScript](./初级算法专题/118.杨辉三角.md)|2019/12/18
 |[20.有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)|简单|栈、字符串|[JavaScript](./初级算法专题/20.有效的括号.md)|2019/12/19
 |[268.缺失数字](https://leetcode-cn.com/problems/missing-number/)|简单|位运算、数组|[JavaScript](./初级算法专题/268.缺失数字.md)|2019/12/20
-|[26.删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|简单|数组、双指针|[JavaScript](./初级算法专题/26.删除排序数组中的重复项.md)|2019/12/21|开始重刷数组到链表部分
+|[26.删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|简单|数组、双指针|[JavaScript](./初级算法专题/26.删除排序数组中的重复项.md)|2019/12/21|重刷数组到链表部分
 |[122.买卖股票的最佳时机II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|贪心、数组|[JavaScript](./初级算法专题/122.买卖股票的最佳时机II.md)|2019/12/22
 |[189.旋转数组](https://leetcode-cn.com/problems/rotate-array/)|简单|数组|[JavaScript](./初级算法专题/189.旋转数组.md)|2019/12/23
 |[217.存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)|简单|哈希表、数组|[JavaScript](./初级算法专题/217.存在重复元素.md)|2019/12/24
