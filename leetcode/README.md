@@ -37,7 +37,7 @@
 |[122.买卖股票的最佳时机II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)|简单|贪心、数组|[JavaScript](./初级算法专题/122.买卖股票的最佳时机II.md)|2019/12/22
 |[189.旋转数组](https://leetcode-cn.com/problems/rotate-array/)|简单|数组|[JavaScript](./初级算法专题/189.旋转数组.md)|2019/12/23
 |[217.存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)|简单|哈希表、数组|[JavaScript](./初级算法专题/217.存在重复元素.md)|2019/12/24
-|[136.只出现一次的数字](https://leetcode-cn.com/problems/contains-duplicate/)|简单|哈希表、位运算|[JavaScript](./初级算法专题/136.只出现一次的数字.md)|2019/12/25
+|[136.只出现一次的数字](https://leetcode-cn.com/problems/single-number/)|简单|哈希表、位运算|[JavaScript](./初级算法专题/136.只出现一次的数字.md)|2019/12/25
 </details>
 
 
