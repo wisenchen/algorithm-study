@@ -91,5 +91,3 @@ var maxNumberOfBalloons2 = function (text) {
 刷题大多都是以js为主 且题解只是个人或参考他人的解题思路并不代表最优解   
 
 如有问题或更好的方案欢迎提出
-
-[github地址](https://github.com/wisenchen/ac/blob/master/leetcode/leetcode%20217.%20%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0.md)
