@@ -45,6 +45,8 @@
 |[189.旋转数组](https://leetcode-cn.com/problems/rotate-array/)|简单|数组|[JavaScript](./leetcode/初级算法专题/189.旋转数组.md)|2019/12/23
 |[217.存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)|简单|哈希表、数组|[JavaScript](./leetcode/初级算法专题/217.存在重复元素.md)|2019/12/24
 |[136.只出现一次的数字](https://leetcode-cn.com/problems/single-number/)|简单|哈希表、位运算|[JavaScript](./leetcode/初级算法专题/136.只出现一次的数字.md)|2019/12/25
+|[350.两个数组的交集II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)|简单|哈希表、双指针|[JavaScript](./leetcode/初级算法专题/350.两个数组的交集II.md)|2019/12/26
+
 </details>
 
 #### 数组专题
