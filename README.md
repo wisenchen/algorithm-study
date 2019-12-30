@@ -49,6 +49,8 @@
 |[66.加一](https://leetcode-cn.com/problems/plus-one/)|简单|数组|[JavaScript](./leetcode/初级算法专题/66.加一.md)|2019/12/27
 |[283.移动零](https://leetcode-cn.com/problems/move-zeroes/)|简单|数组、双指针|[JavaScript](./leetcode/初级算法专题/283.移动零.md)|2019/12/28
 |[1.两数之和](https://leetcode-cn.com/problems/two-sum/submissions/)|简单|数组、hash|[JavaScript](./leetcode/初级算法专题/1.两数之和.md)|2019/12/29
+|[36.有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)|中等|数组、hash|[JavaScript](./leetcode/初级算法专题/36.有效的数独.md)|2019/12/30
+
 </details>
 
 #### 数组专题
