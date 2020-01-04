@@ -54,8 +54,7 @@
 |[344.反转字符串](https://leetcode-cn.com/problems/reverse-string/)|简单|双指针、数组|[JavaScript](./leetcode/初级算法专题/344.反转字符串.md)|2020/1/1
 |[7.整数反转](https://leetcode-cn.com/problems/reverse-integer/)|简单|数学|[JavaScript](./leetcode/初级算法专题/7.整数反转.md)|2020/1/2
 |[387.字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)|简单|哈希表、字符串|[JavaScript](./leetcode/初级算法专题/387.字符串中的第一个唯一字符.md)|2020/1/3
-
-
+|[242.有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)|简单|哈希表、排序|[JavaScript](./leetcode/初级算法专题/242.有效的字母异位词.md)|2020/1/4
 
 </details>
 
