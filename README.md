@@ -55,6 +55,7 @@
 |[7.整数反转](https://leetcode-cn.com/problems/reverse-integer/)|简单|数学|[JavaScript](./leetcode/初级算法专题/7.整数反转.md)|2020/1/2
 |[387.字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)|简单|哈希表、字符串|[JavaScript](./leetcode/初级算法专题/387.字符串中的第一个唯一字符.md)|2020/1/3
 |[242.有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)|简单|哈希表、排序|[JavaScript](./leetcode/初级算法专题/242.有效的字母异位词.md)|2020/1/4
+|[125.验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)|简单|字符串、双指针|[JavaScript](./leetcode/初级算法专题/125.验证回文串.md)|2020/1/5
 
 </details>
 
