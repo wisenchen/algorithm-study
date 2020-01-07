@@ -57,6 +57,7 @@
 |[242.有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)|简单|哈希表、排序|[JavaScript](./leetcode/初级算法专题/242.有效的字母异位词.md)|2020/1/4
 |[125.验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)|简单|字符串、双指针|[JavaScript](./leetcode/初级算法专题/125.验证回文串.md)|2020/1/5
 |[8.字符串转整数-atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|中等|字符串、正则|[JavaScript](./leetcode/初级算法专题/8.字符串转整数-atoi.md)|2020/1/6
+|[28.实现strStr()](https://leetcode-cn.com/problems/implement-strstr)|简单|双指针、字符串|[JavaScript](./leetcode/初级算法专题/28.实现strStr().md)|2020/1/7
 
 </details>
 
