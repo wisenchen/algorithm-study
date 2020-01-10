@@ -59,6 +59,8 @@
 |[8.字符串转整数-atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|中等|字符串、正则|[JavaScript](./leetcode/初级算法专题/8.字符串转整数-atoi.md)|2020/1/6
 |[28.实现strStr()](https://leetcode-cn.com/problems/implement-strstr)|简单|双指针、字符串|[JavaScript](./leetcode/初级算法专题/28.实现strStr().md)|2020/1/7
 |[38.外观数列](https://leetcode-cn.com/problems/count-and-say)|简单|递归、字符串|[JavaScript](./leetcode/初级算法专题/38.外观数列.md)|2020/1/8
+|[14.最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)|简单|字符串|[JavaScript](./leetcode/初级算法专题/14.最长公共前缀.md)|2020/1/9
+|[237.删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)|简单|链表|[JavaScript](./leetcode/初级算法专题/237.删除链表中的节点.md)|2020/1/10
 
 </details>
 
