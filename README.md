@@ -61,6 +61,7 @@
 |[38.外观数列](https://leetcode-cn.com/problems/count-and-say)|简单|递归、字符串|[JavaScript](./leetcode/初级算法专题/38.外观数列.md)|2020/1/8
 |[14.最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)|简单|字符串|[JavaScript](./leetcode/初级算法专题/14.最长公共前缀.md)|2020/1/9
 |[237.删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)|简单|链表|[JavaScript](./leetcode/初级算法专题/237.删除链表中的节点.md)|2020/1/10
+|[19.删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|中等|链表、双指针|[JavaScript](./leetcode/初级算法专题/19.删除链表的倒数第N个节点.md)|2020/1/11
 
 </details>
 
