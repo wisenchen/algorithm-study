@@ -77,5 +77,6 @@
 |[26.删除排序数组重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|简单|数组、双指针|[JavaScript](./leetcode/数组专题/26.删除排序数组重复项.md)|2020/1/15
 |[80.删除排序数组中的重复项-Ⅱ](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii)|中等|数组、双指针|[JavaScript](./leetcode/数组专题/80.删除排序数组中的重复项-Ⅱ.md)|2020/1/16
 |[215.数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|中等|数组、分治|[JavaScript](./leetcode/数组专题/215.数组中的第K个最大元素.md)|2020/1/18
+|[88.合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)|简单|数组、双指针|[JavaScript](./leetcode/数组专题/88.合并两个有序数组.md)|2020/1/19
 
 </details>
