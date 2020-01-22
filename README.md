@@ -81,4 +81,5 @@
 |[167.两数之和Ⅱ](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|简单|数组、双指针|[JavaScript](./leetcode/数组专题/167.两数之和Ⅱ.md)|2020/1/20
 |[167.两数之和Ⅱ](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|简单|数组、双指针|[JavaScript](./leetcode/数组专题/167.两数之和Ⅱ.md)|2020/1/20
 |[125.验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)|简单|数组、双指针|[JavaScript](./leetcode/数组专题/125.验证回文串.md)|2020/1/21
+|[345.反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)|简单|数组、双指针|[JavaScript](./leetcode/数组专题/345.反转字符串中的元音字母.md)|2020/1/22
 </details>
