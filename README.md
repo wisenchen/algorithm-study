@@ -12,8 +12,8 @@
 <details open>
 <summary>展开/收起</summary>
 
-|名称|难度|类型|题解|日期
-|--|--|--|--|--|
+|名称|难度|类型|题解
+|--|--|--|--|
 |[21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|简单|链表|[JavaScript](./leetcode/初级算法专题/21.合并两个有序链表.md)|2019/11/25
 |[234.回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/submissions/)|简单|链表|[JavaScript](./leetcode/初级算法专题/234.回文链表.md)|2019/11/26
 |[141.环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)|简单|链表|[JavaScript](./leetcode/初级算法专题/141.环形链表.md)|2019/11/27
