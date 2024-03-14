@@ -5,8 +5,7 @@
 目前只整理了leetcode刷题部分
 
 ## [LeetCode](https://leetcode-cn.com/)
-### 每天一道算法题
-> 开始记录日期：2019/11/25
+
 
 #### [初级算法专题](https://leetcode-cn.com/explore/featured/card/top-interview-questions-easy/)
 <details open>
