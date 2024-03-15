@@ -86,3 +86,13 @@
 |[209.长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|中等|数组、双指针|[JavaScript](./leetcode/数组专题/209.长度最小的子数组.md)|2020/1/24
 
 </details>
+#### [DP专题](https://leetcode-cn.com/explore/orignial/card/all-about-array/230/define-with-good-care/)
+
+<details open>
+<summary>展开/收起</summary>
+
+|名称|难度|类型|题解
+|--|--|--|--|--|
+|[70.爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)|简单|动态规划|[JavaScript](./leetcode/初级算法专题/70.爬楼梯.md)|2019/12/5
+|[198.打家劫舍](https://leetcode-cn.com/problems/house-robber/)|简单|动态规划|[JavaScript](./leetcode/初级算法专题/198.打家劫舍.md)|2019/12/8
+</details>
